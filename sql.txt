@@ -113,7 +113,7 @@ select * from sales;
 select id,pName 
 from product 
 where 
-product IN 
+id IN 
 (select pid from sales
 
 group by pid
@@ -122,7 +122,6 @@ order by count(pid) desc
 
 limit 0,1
 );
-
 
 2. How many no. of times each product is sold?
 
